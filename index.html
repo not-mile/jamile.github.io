@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Producto</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="formulario">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+
+    <div class="card">
+        <div class="logo">🎁</div>
+        <h1>Nuevo Producto</h1>
+        <p class="subtitle">Completa el formulario y recibe confirmación por email</p>
+        
+        <form action="procesar.php" method="POST">
+            
+            <div class="form-group">
+                <label for="email">📧 Tu Correo Electrónico</label>
+                <input type="email" id="email" name="email" required 
+                       placeholder="tu@email.com">
+            </div>
+
+            <div class="form-group">
+                <label for="nombre">Nombre del Producto</label>
+                <input type="text" id="nombre" name="nombre" required 
+                       placeholder="Ej: Laptop HP">
+            </div>
+
+            <div class="form-group">
+                <label for="precio">Precio</label>
+                <div class="price-input">
+                    <input type="number" id="precio" name="precio" required 
+                           step="0.01" min="0.01" placeholder="400.00">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="cantidad">Cantidad</label>
+                <input type="number" id="cantidad" name="cantidad" required 
+                       step="1" min="1" placeholder="1">
+            </div>
+
+            <div class="form-group">
+                <label for="categoria">Categoría</label>
+                <select id="categoria" name="categoria" required>
+                    <option value="">-- Elige una categoría --</option>
+                    <option value="Electrónica">Electrónica</option>
+                    <option value="Ropa">Ropa</option>
+                    <option value="Alimentos">Alimentos</option>
+                    <option value="Hogar">Hogar</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-submit">
+                📧 Registrar y Enviar
+            </button>
+        </form>
+    </div>
+</body>
+</html>
